@@ -1,8 +1,0 @@
-import requests
-import json
-
-url = "https://stat.ripe.net/data/looking-glass/data.json?resource=149.234.186.0/24"
-
-r = requests.get(url,verify=False)
-jsonA = r.json()
-print(jsonA["data"]["rrcs"][0]['peers'][0]['as_path'])
